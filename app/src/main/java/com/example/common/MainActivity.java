@@ -59,6 +59,20 @@ public class MainActivity extends AppCompatActivity {
         // 두 버튼 연결
         Button main_btn1 = (Button) findViewById(R.id.main_btn1);
         Button main_btn2 = (Button) findViewById(R.id.main_btn2);
+        // 지연 배경 반짝임 객체 연결
+        ImageView blink1=(ImageView)findViewById(R.id.blink);
+        ImageView blink2=(ImageView)findViewById(R.id.blink2);
+        ImageView blink3=(ImageView)findViewById(R.id.blink3);
+        // 지연 : blink 애니메이션
+        Animation mAnimation = new AlphaAnimation(1, 0);
+        mAnimation.setDuration(800);
+        mAnimation.setInterpolator(new LinearInterpolator());
+        mAnimation.setRepeatCount(Animation.INFINITE);
+        mAnimation.setRepeatMode(Animation.REVERSE);
+        //애니메이션 시작
+        blink1.startAnimation(mAnimation);
+        blink2.startAnimation(mAnimation);
+        blink3.startAnimation(mAnimation);
 
         // 새 게임 버튼 누르면
         main_btn1.setOnClickListener(new View.OnClickListener() {

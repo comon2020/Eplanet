@@ -7,6 +7,13 @@
     tools:context=".MainActivity">
 
     <!--지연 : 전체 배경 이미지뷰-->
+
+    <!--지연 : 반짝이 이미지뷰-->
+
+
+    <!--지연 : 반짝이 이미지뷰2-->
+    <!--지연 : 반짝이 이미지뷰2-->
+
     <ImageView
         android:id="@+id/main_bg"
         android:layout_width="0dp"
@@ -16,40 +23,101 @@
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/blink3"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/blink"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="121dp"
+        android:background="@drawable/blink"
+        app:layout_constraintBottom_toTopOf="@+id/main_btn2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/blink4"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <!--지연 : 새 게임 버튼-->
+
+    <ImageView
+        android:id="@+id/blink4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="113dp"
+        android:layout_marginEnd="391dp"
+        android:layout_marginRight="391dp"
+        android:layout_marginBottom="29dp"
+        android:background="@drawable/blink"
+        app:layout_constraintBottom_toTopOf="@+id/main_btn1"
+        app:layout_constraintEnd_toStartOf="@+id/blink"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/blink2"
+        android:layout_width="183dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginRight="97dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/blink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/main_btn2"
+        app:layout_constraintTop_toBottomOf="@+id/blink4"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/blink3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="317dp"
+        android:layout_marginLeft="317dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginRight="116dp"
+        android:layout_marginBottom="214dp"
+        android:background="@drawable/blink"
+        app:layout_constraintBottom_toTopOf="@+id/main_btn2"
+        app:layout_constraintEnd_toStartOf="@+id/blink"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!--지연 : 불러오기 버튼-->
+
     <Button
         android:id="@+id/main_btn1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
 
-        android:layout_marginStart="131dp"
-        android:layout_marginLeft="131dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginLeft="134dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
         android:background="@drawable/main_btn1"
-        android:textColor="#181907"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/main_btn2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/main_btn2" />
+        app:layout_constraintTop_toBottomOf="@+id/blink4" />
 
-    <!--지연 : 불러오기 버튼-->
     <Button
         android:id="@+id/main_btn2"
         android:layout_width="0dp"
-        android:layout_height="130dp"
-        android:layout_gravity="center_vertical"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
 
-        android:layout_marginEnd="176dp"
-        android:layout_marginRight="176dp"
+        android:layout_marginEnd="153dp"
+        android:layout_marginRight="153dp"
         android:background="@drawable/main_btn2"
-        android:textColor="#181907"
-        app:layout_constraintBottom_toBottomOf="@+id/main_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/main_btn1" />
+        app:layout_constraintStart_toEndOf="@+id/main_btn1"
+        app:layout_constraintTop_toBottomOf="@+id/blink" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
