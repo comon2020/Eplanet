@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         main_btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "액티비티 전환", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "액티비티 전환", Toast.LENGTH_LONG).show();
                 // 액티비티 전환 코드
                 Intent intent = new Intent(getApplicationContext(), NewGameActivity.class);
                 startActivity(intent);
