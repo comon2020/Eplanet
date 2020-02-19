@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // 지연 : 배경음악시작
-        mp = MediaPlayer.create(this, R.raw.main_music);
+        mp = MediaPlayer.create(this, R.raw.milos);
         mp.setLooping(true); // 반복여부
         mp.start();
 
