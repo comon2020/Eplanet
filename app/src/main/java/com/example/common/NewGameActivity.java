@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -20,13 +21,19 @@ public class NewGameActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.activity_newgame);
 
+        // 세영 : 커서 포커스
+        EditText mName = (EditText) findViewById(R.id.my_name);
+        mName.requestFocus();
+
         // 주희 : 이름 입력하면 다음 페이지로 넘어감 (행성 리스트)
         Button enter_btn = (Button) findViewById(R.id.enter_btn);
+;
         enter_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), PlanetListActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
